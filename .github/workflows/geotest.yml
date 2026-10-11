@@ -31,7 +31,7 @@ jobs:
 
       - name: Provera ARCore ključa
         env:
-          ARCORE_API_KEY: ${{ secrets.ARCORE_API_KEY }}
+          ARCORE_API_KEY: ${{ secrets.ARCORE_API_KEY || secrets.APCORE_API_KEY }}
         run: |
           if [ -z "$ARCORE_API_KEY" ]; then
             echo "::warning::Nema tajne ARCORE_API_KEY - aplikacija će se napraviti, ali Geospatial neće raditi."
@@ -41,7 +41,7 @@ jobs:
 
       - name: Pravljenje APK fajla
         env:
-          ARCORE_API_KEY: ${{ secrets.ARCORE_API_KEY }}
+          ARCORE_API_KEY: ${{ secrets.ARCORE_API_KEY || secrets.APCORE_API_KEY }}
         run: |
           chmod +x gradlew
           set -o pipefail
