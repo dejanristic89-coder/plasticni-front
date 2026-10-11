@@ -17,14 +17,14 @@ apply plugin: 'com.android.application'
 
 android {
     namespace "com.google.ar.core.examples.java.geospatial"
-    compileSdkVersion 37
+    compileSdkVersion 35
     defaultConfig {
         applicationId "com.plasticnifront.geotest"
 
         // AR Optional apps must declare minSdkVersion >= 14.
         // AR Required apps must declare minSdkVersion >= 24.
         minSdkVersion 28
-        targetSdkVersion 37
+        targetSdkVersion 35
         versionCode 1
         versionName '1.0'
         // ARCore API ključ dolazi iz GitHub tajne ARCORE_API_KEY (ne čuva se u kodu)
